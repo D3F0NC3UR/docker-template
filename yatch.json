@@ -166,7 +166,7 @@
       }
     ]
   },
-//co
+  //co
   {
     "type": "1",
     "title": "a ",
@@ -197,21 +197,21 @@
       }
     ],
     "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "!PUID"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "!PGID"
-        },
-        {
-          "name": "port",
-          "label": "port",
-          "default": "20211"
-        }
-      ]
-    }
-  ]
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      },
+      {
+        "name": "port",
+        "label": "port",
+        "default": "20211"
+      }
+    ]
+  }
+]
