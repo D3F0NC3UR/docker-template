@@ -4,16 +4,14 @@ title: pialert
 name: pialert
 description: This is a description.
 logo: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png
-image: dev/application:latest
+image: jokobsk/pi.alert:latest
 note: This is a note
 categories:
 - Other
 - Tools
 platform: linux
 restart_policy: unless-stopped
-ports:
-- 9091:9091/tcp
-- 9090:9090/tcp
+##- 9091:9091/tcp
 network_mode: host
 volumes:
 - container: "/data"
@@ -25,13 +23,13 @@ sysctls:
 cap_add:
 - NET_ADMIN
 env:
-- name: PUID
+- name: HOST_USER_ID
   label: PUID
   default: '1000'
-- name: PGID
+- name: HOST_USER_GID
   label: PGID
   default: '1000'
-- name: EnvWithDescription
-  label: EnvWithDescription
+- name: port
+  label: port
   description: This is a description
-  default: default
+  default: 20211
