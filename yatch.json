@@ -166,10 +166,9 @@
       }
     ]
   },
-  //co
   {
     "type": "1",
-    "title": "a ",
+    "title": "b ",
     "name": "test ",
     "description": "c'est de la merde",
     "logo": "LOGO",
