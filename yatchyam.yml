@@ -15,7 +15,7 @@
   network_mode: host
   volumes:
   - container: "/home/pi/pialert/config"
-  bind: "!data/pialert"
+    bind: "!data/pialert"
   - container: "/home/pi/pialert/db"
     bind: "!data/pialert"
   cap_add:
