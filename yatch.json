@@ -48,9 +48,9 @@
         "default": "!PGID"
       },
       {
-      "name": "port",
-      "label": "port",
-      "default": "20211"
+        "name": "port",
+        "label": "port",
+        "default": "20211"
       }
     ]
   },
@@ -192,22 +192,23 @@
         "container": "/etc/localtime",
         "bind": "!localtime"
       }
-      "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "!PUID"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "!PGID"
-      },
-      {
-        "name": "port",
-        "label": "port",
-        "default": "20211"
-      }
-    ]
-  }
-]
+      ],
+    "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "!PUID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "!PGID"
+        },
+        {
+          "name": "port",
+          "label": "port",
+          "default": "20211"
+        }
+      ]
+    }
+  ]
