@@ -172,10 +172,10 @@
     "name": "test ",
     "description": "c'est de la merde",
     "logo": "LOGO",
-    "image": "?",
+    "image": "cumshot/lol:latest",
     "note": "NOTE",
     "categories": [
-      ""
+      "catego"
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",//*unless-stopped or always
@@ -185,8 +185,8 @@
     "network_mode": "pont",
     "volumes": [
       {
-        "container": "",
-        "bind": ""
+        "container": "/data",
+        "bind": "!data"
       },
       {
         "container": "/etc/localtime",
