@@ -187,12 +187,12 @@
     "network_mode": "pont",
     "volumes": [
       {
-        "container": "/data",
-        "bind": "!data"
+      "container": "/data",
+      "bind": "!data"
       },
       {
-        "container": "/etc/localtime",
-        "bind": "!localtime"
+      "container": "/etc/localtime",
+      "bind": "!localtime"
       }
     ],
     "env": [
@@ -201,11 +201,11 @@
         "label": "PUID",
         "default": "!PUID"
       },
-//      {
-//        "name": "PGID",
-//        "label": "PGID",
-//        "default": "!PGID"
-//      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      },
       {
         "name": "port",
         "label": "port",
