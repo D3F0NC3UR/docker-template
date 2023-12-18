@@ -54,13 +54,9 @@
         "default": "default"
       },
       {
-        "name": "Port",
-        "label": ""
-      },
-            {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "!PUID"
+      "name": "port",
+      "label": "port",
+      "default": "!PORT"
       }
     ]
   },
