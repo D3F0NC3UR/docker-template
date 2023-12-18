@@ -39,6 +39,11 @@
 				"default":"!PGID"
 			},
 			{
+			"name": "TZ",
+			"label": "Timezone",
+			"default": "!TZ"
+			},
+			{
 				"name":"port",
 				"label":"port",
 				"default":"20211"
