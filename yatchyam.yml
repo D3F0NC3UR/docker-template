@@ -32,7 +32,7 @@
       default: 20211
 
 - type: 1
-  title: pialert
+  title: pialert2
   name: pialert
   description: This is a description.
   logo: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png
