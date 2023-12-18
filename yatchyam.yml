@@ -1,7 +1,7 @@
 ---
 type: 1
-title: App Title
-name: container-name
+title: pialert
+name: pialert
 description: This is a description.
 logo: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png
 image: dev/application:latest
@@ -14,10 +14,10 @@ restart_policy: unless-stopped
 ports:
 - 9091:9091/tcp
 - 9090:9090/tcp
-network_mode: bridge
+network_mode: host
 volumes:
 - container: "/data"
-  bind: "!downloads"
+  bind: "!data/pialert"
 - container: "/etc/localtime"
   bind: "!localtime"
 sysctls:
