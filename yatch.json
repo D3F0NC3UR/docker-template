@@ -1,22 +1,22 @@
 [
 	{
-		"type":1,
-		"title":"Pi Alert",
-		"name":"pialert",
-		"description":"💻🔍 WIFI / LAN intruder detector. Scans for devices connected to your network and alerts you if new and unknown devices are found.",
-		"logo":"https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-		"image":"jokobsk/pi.alert:latest",
-		"note":"This is a note",
+		"type": 1,
+		"title": "Pi Alert",
+		"name": "pialert",
+		"description": "💻🔍 WIFI / LAN intruder detector. Scans for devices connected to your network and alerts you if new and unknown devices are found.",
+		"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
+		"image": "jokobsk/pi.alert:latest",
+		"note": "This is a note",
 		"categories":[
 			"Other",
 			"outil"
 		],
-		"platform":"linux",
-		"restart_policy":"unless-stopped",
+		"platform": "linux",
+		"restart_policy": "unless-stopped",
 		"ports": [
       "3306:3306/tcp"
     ],
-		"volumes":[
+		"volumes": [
 			{
 				"container":"/home/pi/pialert/config",
 				"bind":"!data/pialert",
