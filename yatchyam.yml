@@ -7,29 +7,29 @@
   image: jokobsk/pi.alert:latest
   note: This is a note
   categories:
-    - Other
-    - Tools
+      - Other
+      - Tools
   platform: linux
   restart_policy: unless-stopped
   network_mode: host
   volumes:
-    - container: "/home/pi/pialert/config"
-      bind: "!data/pialert"
-    - container: "/home/pi/pialert/db"
-      bind: "!data/pialert"
+      - container: "/home/pi/pialert/config"
+        bind: "!data/pialert"
+      - container: "/home/pi/pialert/db"
+        bind: "!data/pialert"
   cap_add:
-    - NET_ADMIN
+      - NET_ADMIN
   env:
-    - name: HOST_USER_ID
-      label: PUID
-      default: '1000'
-    - name: HOST_USER_GID
-      label: PGID
-      default: '1000'
-    - name: port
-      label: port
-      description: This is a description
-      default: 20211
+      - name: HOST_USER_ID
+        label: PUID
+        default: "1000"
+      - name: HOST_USER_GID
+        label: PGID
+        default: "1000"
+      - name: port
+        label: port
+        description: This is a description
+        default: 20211
 
 - type: 1
   title: pialert2
@@ -39,26 +39,26 @@
   image: jokobsk/pi.alert:latest
   note: This is a note
   categories:
-    - Other
-    - Tools
+      - Other
+      - Tools
   platform: linux
   restart_policy: unless-stopped
   network_mode: host
   volumes:
-    - container: "/home/pi/pialert/config"
-      bind: "!data/pialert"
-    - container: "/home/pi/pialert/db"
-      bind: "!data/pialert"
+      - container: "/home/pi/pialert/config"
+        bind: "!data/pialert"
+      - container: "/home/pi/pialert/db"
+        bind: "!data/pialert"
   cap_add:
-    - NET_ADMIN
+      - NET_ADMIN
   env:
-    - name: HOST_USER_ID
-      label: PUID
-      default: '1000'
-    - name: HOST_USER_GID
-      label: PGID
-      default: '1000'
-    - name: port
-      label: port
-      description: This is a description
-      default: 20211
+      - name: HOST_USER_ID
+        label: PUID
+        default: "1000"
+      - name: HOST_USER_GID
+        label: PGID
+        default: "1000"
+      - name: port
+        label: port
+        description: This is a description
+        default: 20211
