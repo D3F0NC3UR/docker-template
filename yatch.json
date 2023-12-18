@@ -13,6 +13,9 @@
       ],
       "platform":"linux",
       "restart_policy":"unless-stopped",
+      "ports": [
+        "20211/tcp"
+      ],
       "network_mode":"host",
       "volumes":[
          {
