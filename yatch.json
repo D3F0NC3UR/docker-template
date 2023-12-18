@@ -38,7 +38,7 @@
           "name": "TZ",
           "label": "Timezone",
           "default": "!TZ",
-          "description": "Specify a timezone to use for example Europe/Amsterdam"
+          "description": ""
         },
         {
           "name": "PMA_ARBITRARY",
