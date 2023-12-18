@@ -14,7 +14,7 @@
 		"platform": "linux",
 		"restart_policy": "unless-stopped",
 		"ports": [
-      "3306:3306/tcp"
+      "3306/tcp"
     ],
 		"volumes": [
 			{
