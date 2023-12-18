@@ -167,59 +167,56 @@
     ]
   },
   {
-    "type": 1,
-    "title": "z",
-    "name": "z",
-    "description": "This is a description.",
-    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-    "image": "dev/application:latest",
-    "note": "This is a note",
+    "type": "1",
+    "title": "test ",
+    "name": "test ",
+    "description": "c'est de la merde",
+    "logo": "LOGO",
+    "image": "?",
+    "note": "NOTE",
     "categories": [
-      "Other",
-      "Tools"
+      ""
     ],
     "platform": "linux",
-    "restart_policy": "unless-stopped",
+    "restart_policy": "unless-stopped",//*unless-stopped or always
     "ports": [
-      "9091:9091/tcp",
-      "9090:9090/tcp"
+      "69:69/tcp"
     ],
-    "network_mode": "bridge",
+    "network_mode": "pont",
     "volumes": [
       {
-        "container": "/data",
-        "bind": "!downloads"
+        "container": "",
+        "bind": ""
       },
       {
         "container": "/etc/localtime",
         "bind": "!localtime"
       }
     ],
-    "sysctls": [
-      {
-        "net.ipv6.conf.all.disable_ipv6": "0"
-      }
-    ],
-    "cap_add": [
-      "NET_ADMIN"
-    ],
+    //"sysctls": [
+      //{
+        //"net.ipv6.conf.all.disable_ipv6": "0"
+      //}
+    //],
+    //"cap_add": [
+      //"NET_ADMIN"
+    //],
     "env": [
       {
         "name": "PUID",
         "label": "PUID",
-        "default": "1000"
+        "default": "!PUID"
       },
       {
         "name": "PGID",
         "label": "PGID",
-        "default": "1000"
+        "default": "!PGID"
       },
       {
-        "name": "EnvWithDescription",
-        "label": "EnvWithDescription",
-        "description": "This is a description",
-        "default": "default"
+        "name": "port",
+        "label": "port",
+        "default": "20211"
       }
     ]
-  }
+  },
 ]
