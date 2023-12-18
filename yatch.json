@@ -156,7 +156,7 @@
     {
   "type": 1,
   "title": "z",
-  "name": "container-name",
+  "name": "z",
   "description": "This is a description.",
   "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
   "image": "dev/application:latest",
