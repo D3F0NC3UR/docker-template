@@ -167,7 +167,7 @@
     ]
   },
   {
-    "type": "1",
+    "type": 1,
     "title": "b ",
     "name": "test ",
     "description": "c'est de la merde",
@@ -181,7 +181,7 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-      "lol": "69:68/tcp"
+        "lol": "69:68/tcp"
       }
     ],
     "network_mode": "pont",
