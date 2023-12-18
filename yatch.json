@@ -5,7 +5,7 @@
   "name": "pialert",
   "description": "This is a description.",
   "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-  "image": "dev/application:latest",
+  "image": "jokobsk/pi.alert:latest",
   "note": "This is a note",
   "categories": [
     "Other",
@@ -17,7 +17,7 @@
     "9091:9091/tcp",
     "9090:9090/tcp"
   ],
-  "network_mode": "bridge",
+  "network_mode": "host",
   "volumes": [
     {
       "container": "/data",
