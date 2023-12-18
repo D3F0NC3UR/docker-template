@@ -36,7 +36,7 @@
         },
         {
           "name": "TZ",
-          "label": "TZ",
+          "label": "Timezone",
           "default": "!TZ",
           "description": "Specify a timezone to use for example Europe/Amsterdam"
         },
@@ -4276,7 +4276,8 @@
           "label": "DNSPLUGIN"
         }
       ]
-    }, {
+    }, 
+    {
       "type": 1,
       "title": "Peppermint",
       "name": "Peppermint",
