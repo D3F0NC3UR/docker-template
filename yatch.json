@@ -1,204 +1,226 @@
 [
-    {
-        "type": 1,
-        "title": "Pi Alert",
-        "name": "pialert",
-        "description": "This is a description.",
-        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-        "image": "jokobsk/pi.alert:latest",
-        "note": "This is a note",
-        "categories": ["Other", "Tools"],
-        "platform": "linux",
-        "restart_policy": "unless-stopped",
-        "ports": ["9091:9091/tcp", "9090:9090/tcp"],
-        "network_mode": "host",
-        "volumes": [
-            {
-                "container": "/data",
-                "bind": "!downloads"
-            },
-            {
-                "container": "/etc/localtime",
-                "bind": "!localtime"
-            }
-        ],
-        "sysctls": [
-            {
-                "net.ipv6.conf.all.disable_ipv6": "0"
-            }
-        ],
-        "cap_add": ["NET_ADMIN"],
-        "env": [
-            {
-                "name": "PUID",
-                "label": "PUID",
-                "default": "1000"
-            },
-            {
-                "name": "PGID",
-                "label": "PGID",
-                "default": "1000"
-            },
-            {
-                "name": "EnvWithDescription",
-                "label": "EnvWithDescription",
-                "description": "This is a description",
-                "default": "default"
-            }
-        ]
-    },
-    {
-        "type": 1,
-        "title": "",
-        "name": "Phpmyadmin",
-        "description": "",
-        "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/phpmyadmin-logo.png",
-        "image": "lscr.io/linuxserver/phpmyadmin:latest",
-        "note": "Yacht App Templates by <a href='https://github.com/SelfhostedPro' target='_blank'>SelfhostedPro</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p>",
-        "categories": ["System Tools"],
-        "platform": "linux",
-        "restart_policy": "unless-stopped",
-        "ports": ["80:8306/tcp"],
-        "volumes": [
-            {
-                "container": "/config",
-                "bind": "!config/phpmyadmin/config"
-            }
-        ],
-        "env": [
-            {
-                "name": "PUID",
-                "label": "PUID",
-                "default": "!PUID",
-                "description": "for UserID"
-            },
-            {
-                "name": "PGID",
-                "label": "PGID",
-                "default": "!PGID",
-                "description": "for GroupID"
-            },
-            {
-                "name": "TZ",
-                "label": "Timezone",
-                "default": "!TZ",
-                "description": ""
-            },
-            {
-                "name": "PMA_ARBITRARY",
-                "label": "PMA_ARBITRARY",
-                "default": "1",
-                "description": "Set to `1` to allow you to connect to any server. Setting to `0` will only allow you to connect to specified hosts (See Application Setup)"
-            },
-            {
-                "name": "PMA_ABSOLUTE_URI",
-                "label": "PMA_ABSOLUTE_URI",
-                "default": "https://phpmyadmin.yourdomain.tld",
-                "description": "Set the URL you will use to access the web frontend"
-            }
-        ]
-    },
-    {
-        "type": 1,
-        "title": "Airsonic",
-        "name": "airsonic",
-        "description": "Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
-        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/airsonic-logo.png",
-        "image": "lscr.io/linuxserver/airsonic:latest",
-        "categories": ["Music"],
-        "platform": "linux",
-        "restart_policy": "unless-stopped",
-        "ports": [
-            {
-                "WebUI": "4040:4040/tcp"
-            }
-        ],
-        "volumes": [
-            {
-                "container": "/music",
-                "bind": "!music"
-            },
-            {
-                "container": "/playlists",
-                "bind": "!playlists"
-            },
-            {
-                "container": "/podcasts",
-                "bind": "!podcasts"
-            },
-            {
-                "container": "/media",
-                "bind": "!media/Airsonic"
-            },
-            {
-                "container": "/config",
-                "bind": "!config/Airsonic/"
-            }
-        ],
-        "env": [
-            {
-                "name": "PUID",
-                "label": "PUID",
-                "default": "!PUID"
-            },
-            {
-                "name": "PGID",
-                "label": "PGID",
-                "default": "!PGID"
-            },
-            {
-                "name": "JAVA_OPTS",
-                "label": "JAVA_OPTS",
-                "default": "-Xms256m -Xmx512m"
-            }
-        ]
-    },
-    {
-        "type": 1,
-        "title": "z",
-        "name": "z",
-        "description": "This is a description.",
-        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-        "image": "dev/application:latest",
-        "note": "This is a note",
-        "categories": ["Other", "Tools"],
-        "platform": "linux",
-        "restart_policy": "unless-stopped",
-        "ports": ["9091:9091/tcp", "9090:9090/tcp"],
-        "network_mode": "bridge",
-        "volumes": [
-            {
-                "container": "/data",
-                "bind": "!downloads"
-            },
-            {
-                "container": "/etc/localtime",
-                "bind": "!localtime"
-            }
-        ],
-        "sysctls": [
-            {
-                "net.ipv6.conf.all.disable_ipv6": "0"
-            }
-        ],
-        "cap_add": ["NET_ADMIN"],
-        "env": [
-            {
-                "name": "PUID",
-                "label": "PUID",
-                "default": "1000"
-            },
-            {
-                "name": "PGID",
-                "label": "PGID",
-                "default": "1000"
-            },
-            {
-                "name": "EnvWithDescription",
-                "label": "EnvWithDescription",
-                "description": "This is a description",
-                "default": "default"
-            }
-        ]
-    }
+  {
+    "type": 1,
+    "title": "Pi Alert",
+    "name": "pialert",
+    "description": "This is a description.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
+    "image": "jokobsk/pi.alert:latest",
+    "note": "This is a note",
+    "categories": [
+      "Other",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "9091:9091/tcp",
+      "9090:9090/tcp"
+    ],
+    "network_mode": "host",
+    "volumes": [
+      {
+        "container": "/data",
+        "bind": "!downloads"
+      },
+      {
+        "container": "/etc/localtime",
+        "bind": "!localtime"
+      }
+    ],
+    "sysctls": [
+      {
+        "net.ipv6.conf.all.disable_ipv6": "0"
+      }
+    ],
+    "cap_add": [
+      "NET_ADMIN"
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "1000"
+      },
+      {
+        "name": "EnvWithDescription",
+        "label": "EnvWithDescription",
+        "description": "This is a description",
+        "default": "default"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "",
+    "name": "Phpmyadmin",
+    "description": "",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/phpmyadmin-logo.png",
+    "image": "lscr.io/linuxserver/phpmyadmin:latest",
+    "note": "Yacht App Templates by <a href='https://github.com/SelfhostedPro' target='_blank'>SelfhostedPro</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p>",
+    "categories": [
+      "System Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "80:8306/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "!config/phpmyadmin/config"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID",
+        "description": "for UserID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID",
+        "description": "for GroupID"
+      },
+      {
+        "name": "TZ",
+        "label": "Timezone",
+        "default": "!TZ",
+        "description": ""
+      },
+      {
+        "name": "PMA_ARBITRARY",
+        "label": "PMA_ARBITRARY",
+        "default": "1",
+        "description": "Set to `1` to allow you to connect to any server. Setting to `0` will only allow you to connect to specified hosts (See Application Setup)"
+      },
+      {
+        "name": "PMA_ABSOLUTE_URI",
+        "label": "PMA_ABSOLUTE_URI",
+        "default": "https://phpmyadmin.yourdomain.tld",
+        "description": "Set the URL you will use to access the web frontend"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "Airsonic",
+    "name": "airsonic",
+    "description": "Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/airsonic-logo.png",
+    "image": "lscr.io/linuxserver/airsonic:latest",
+    "categories": [
+      "Music"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "4040:4040/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/music",
+        "bind": "!music"
+      },
+      {
+        "container": "/playlists",
+        "bind": "!playlists"
+      },
+      {
+        "container": "/podcasts",
+        "bind": "!podcasts"
+      },
+      {
+        "container": "/media",
+        "bind": "!media/Airsonic"
+      },
+      {
+        "container": "/config",
+        "bind": "!config/Airsonic/"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      },
+      {
+        "name": "JAVA_OPTS",
+        "label": "JAVA_OPTS",
+        "default": "-Xms256m -Xmx512m"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "z",
+    "name": "z",
+    "description": "This is a description.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
+    "image": "dev/application:latest",
+    "note": "This is a note",
+    "categories": [
+      "Other",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "9091:9091/tcp",
+      "9090:9090/tcp"
+    ],
+    "network_mode": "bridge",
+    "volumes": [
+      {
+        "container": "/data",
+        "bind": "!downloads"
+      },
+      {
+        "container": "/etc/localtime",
+        "bind": "!localtime"
+      }
+    ],
+    "sysctls": [
+      {
+        "net.ipv6.conf.all.disable_ipv6": "0"
+      }
+    ],
+    "cap_add": [
+      "NET_ADMIN"
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "1000"
+      },
+      {
+        "name": "EnvWithDescription",
+        "label": "EnvWithDescription",
+        "description": "This is a description",
+        "default": "default"
+      }
+    ]
+  }
 ]
