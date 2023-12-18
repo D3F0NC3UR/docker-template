@@ -194,23 +194,23 @@
         "container": "/etc/localtime",
         "bind": "!localtime"
       }
-    ]
-/*    "env": [
+    ],
+    "env": [
       {
         "name": "PUID",
         "label": "PUID",
         "default": "!PUID"
       },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "!PGID"
-      },
+//      {
+//        "name": "PGID",
+//        "label": "PGID",
+//        "default": "!PGID"
+//      },
       {
         "name": "port",
         "label": "port",
         "default": "20211"
       }
-    ]*/
+    ]
   }
 ]
