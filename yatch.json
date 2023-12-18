@@ -183,7 +183,7 @@
     "platform": "linux",
     "restart_policy": "unless-stopped",
     "ports": [
-      "label": "69:69/tcp"
+      "lol": "69:69/tcp"
     ],
     "network_mode": "pont",
     "volumes": [
