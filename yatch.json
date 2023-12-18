@@ -14,14 +14,15 @@
     "platform": "linux",
     "restart_policy": "unless-stopped",
     "ports": [
-      "9091:9091/tcp",
-      "9090:9090/tcp"
+      {
+        "Webui": "20211:20211/tcp"
+      }
     ],
     "network_mode": "host",
     "volumes": [
       {
         "container": "/data",
-        "bind": "!downloads"
+        "bind": "!data"
       },
       {
         "container": "/etc/localtime",
@@ -68,7 +69,9 @@
     "platform": "linux",
     "restart_policy": "unless-stopped",
     "ports": [
-      "80:8306/tcp"
+      {
+        "test": "80:8306/tcp"
+      }
     ],
     "volumes": [
       {
@@ -93,7 +96,6 @@
         "name": "TZ",
         "label": "Timezone",
         "default": "!TZ",
-        "description": ""
       },
       {
         "name": "PMA_ARBITRARY",
@@ -106,63 +108,6 @@
         "label": "PMA_ABSOLUTE_URI",
         "default": "https://phpmyadmin.yourdomain.tld",
         "description": "Set the URL you will use to access the web frontend"
-      }
-    ]
-  },
-  {
-    "type": 1,
-    "title": "Airsonic",
-    "name": "airsonic",
-    "description": "Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
-    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/airsonic-logo.png",
-    "image": "lscr.io/linuxserver/airsonic:latest",
-    "categories": [
-      "Music"
-    ],
-    "platform": "linux",
-    "restart_policy": "unless-stopped",
-    "ports": [
-      {
-        "WebUI": "4040:4040/tcp"
-      }
-    ],
-    "volumes": [
-      {
-        "container": "/music",
-        "bind": "!music"
-      },
-      {
-        "container": "/playlists",
-        "bind": "!playlists"
-      },
-      {
-        "container": "/podcasts",
-        "bind": "!podcasts"
-      },
-      {
-        "container": "/media",
-        "bind": "!media/Airsonic"
-      },
-      {
-        "container": "/config",
-        "bind": "!config/Airsonic/"
-      }
-    ],
-    "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "!PUID"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "!PGID"
-      },
-      {
-        "name": "JAVA_OPTS",
-        "label": "JAVA_OPTS",
-        "default": "-Xms256m -Xmx512m"
       }
     ]
   },
@@ -205,11 +150,6 @@
         "name": "PGID",
         "label": "PGID",
         "default": "!PGID"
-      },
-      {
-        "name": "port",
-        "label": "port",
-        "default": "20211"
       }
     ]
   }
