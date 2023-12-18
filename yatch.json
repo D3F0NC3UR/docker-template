@@ -195,14 +195,12 @@
         "bind": "!localtime"
       }
     ],
-    "env": [
-/*
+/*    "env": [
       {
         "name": "PUID",
         "label": "PUID",
         "default": "!PUID"
       },
-*/
       {
         "name": "PGID",
         "label": "PGID",
@@ -213,6 +211,6 @@
         "label": "port",
         "default": "20211"
       }
-    ]
+    ]*/
   }
 ]
