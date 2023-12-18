@@ -178,7 +178,7 @@
       "catego"
     ],
     "platform": "linux",
-    "restart_policy": "unless-stopped",//*unless-stopped or always
+    "restart_policy": "unless-stopped",
     "ports": [
       "69:69/tcp"
     ],
@@ -193,14 +193,14 @@
         "bind": "!localtime"
       }
     ],
-    //"sysctls": [
+    /*"sysctls": [
       //{
         //"net.ipv6.conf.all.disable_ipv6": "0"
       //}
-    //],
+      ],
     //"cap_add": [
       //"NET_ADMIN"
-    //],
+      ],*/
     "env": [
       {
         "name": "PUID",
