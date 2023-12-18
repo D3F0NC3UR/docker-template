@@ -13,7 +13,9 @@
 		],
 		"platform":"linux",
 		"restart_policy":"unless-stopped",
-		"network_mode":"host",
+		"ports": [
+      "3306:3306/tcp"
+    ],
 		"volumes":[
 			{
 				"container":"/home/pi/pialert/config",
