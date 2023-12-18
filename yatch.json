@@ -179,7 +179,7 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "ports": [
+    "ports": [ //this is a test
       {
       "lol": "69:68/tcp"
       }
