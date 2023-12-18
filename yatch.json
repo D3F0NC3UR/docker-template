@@ -9,7 +9,7 @@
       "note":"This is a note",
       "categories":[
          "Other",
-         "Tools"
+         "outil"
       ],
       "platform":"linux",
       "restart_policy":"unless-stopped",
