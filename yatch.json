@@ -20,12 +20,12 @@
       "volumes":[
          {
             "container":"/home/pi/pialert/config",
-            "bind":"!data",
+            "bind":"!data/pialert",
             "description":"REQUIRED"
          },
          {
             "container":"/home/pi/pialert/db",
-            "bind":"!data"
+            "bind":"!data/pialert"
          }
       ],
       "env":[
