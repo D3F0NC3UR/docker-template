@@ -48,15 +48,9 @@
         "default": "!PGID"
       },
       {
-        "name": "EnvWithDescription",
-        "label": "EnvWithDescription",
-        "description": "This is a description",
-        "default": "default"
-      },
-      {
       "name": "port",
       "label": "port",
-      "default": "!PORT"
+      "default": "20211"
       }
     ]
   },
