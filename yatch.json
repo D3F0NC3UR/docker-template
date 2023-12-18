@@ -195,7 +195,7 @@
         "container": "/etc/localtime",
         "bind": "!localtime"
       }
-      ],
+    ],
     "env": [
         {
           "name": "PUID",
