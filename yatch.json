@@ -181,18 +181,18 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-      "lol": "69:68/tcp"
+        "lol": "69:68/tcp"
       }
     ],
     "network_mode": "pont",
     "volumes": [
       {
-      "container": "/data",
-      "bind": "!data"
+        "container": "/data",
+        "bind": "!data"
       },
       {
-      "container": "/etc/localtime",
-      "bind": "!localtime"
+        "container": "/etc/localtime",
+        "bind": "!localtime"
       }
     ],
     "env": [
