@@ -13,7 +13,6 @@
       ],
       "platform":"linux",
       "restart_policy":"unless-stopped",
-      "ports":[],
       "network_mode":"host",
       "volumes":[
          {
