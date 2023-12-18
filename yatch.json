@@ -52,7 +52,7 @@
         "label": "EnvWithDescription",
         "description": "This is a description",
         "default": "default"
-      }'
+      },
       {
         "name": "Port",
         "label":
