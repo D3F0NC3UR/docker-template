@@ -196,7 +196,7 @@
       }
     ],
     "env": [
-      {
+/*      {
         "name": "PUID",
         "label": "PUID",
         "default": "!PUID"
@@ -210,7 +210,7 @@
         "name": "port",
         "label": "port",
         "default": "20211"
-      }
+      }*/
     ]
   }
 ]
