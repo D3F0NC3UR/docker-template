@@ -27,7 +27,7 @@
 				"bind":"!data/pialert"
 			}
 		],
-		"env":[
+		"env": [
 			{
 				"name":"HOST_USER_ID",
 				"label":"PUID",
@@ -63,8 +63,8 @@
 				"lol":"69:68/tcp"
 			}
 		],
-		"network_mode":"pont",
-		"volumes":[
+		"network_mode": "none",
+		"volumes": [
 			{
 				"container":"/data",
 				"bind":"!data"
@@ -74,7 +74,7 @@
 				"bind":"!localtime"
 			}
 		],
-		"env":[
+		"env": [
 			{
 				"name":"PUID",
 				"label":"PUID",
